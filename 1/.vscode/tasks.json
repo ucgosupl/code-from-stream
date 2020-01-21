@@ -1,0 +1,47 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build template_tests debug",
+            "type": "shell",
+            "command": "ninja -v",
+            "args": [],
+            "options": {
+                "cwd": "${workspaceFolder}/test/template/out"
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "type": "shell",
+            "label": "run template_tests",
+            "command": "./template_tests.exe",
+            "args": [],
+            "options": {
+                "cwd": "${workspaceFolder}/test/template/out"
+            },
+            "group": "test"
+        },
+        {
+            "label": "build cbuf_tests debug",
+            "type": "shell",
+            "command": "ninja -v",
+            "args": [],
+            "options": {
+                "cwd": "${workspaceFolder}/test/cbuf/out"
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "type": "shell",
+            "label": "run cbuf_tests",
+            "command": "./cbuf_tests.exe",
+            "args": [],
+            "options": {
+                "cwd": "${workspaceFolder}/test/cbuf/out"
+            },
+            "group": "test"
+        },
+    ]
+}
