@@ -13,6 +13,17 @@
             "problemMatcher": []
         },
         {
+            "label": "clean template_tests",
+            "type": "shell",
+            "command": "ninja -v clean",
+            "args": [],
+            "options": {
+                "cwd": "${workspaceFolder}/test/template/out"
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
             "type": "shell",
             "label": "run template_tests",
             "command": "./template_tests.exe",
@@ -34,12 +45,55 @@
             "problemMatcher": []
         },
         {
+            "label": "clean cbuf_tests",
+            "type": "shell",
+            "command": "ninja -v clean",
+            "args": [],
+            "options": {
+                "cwd": "${workspaceFolder}/test/cbuf/out"
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
             "type": "shell",
             "label": "run cbuf_tests",
             "command": "./cbuf_tests.exe",
             "args": [],
             "options": {
                 "cwd": "${workspaceFolder}/test/cbuf/out"
+            },
+            "group": "test"
+        },
+        {
+            "label": "build heartbeat_tests debug",
+            "type": "shell",
+            "command": "ninja -v",
+            "args": [],
+            "options": {
+                "cwd": "${workspaceFolder}/test/heartbeat/out"
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "clean heartbeat_tests",
+            "type": "shell",
+            "command": "ninja -v clean",
+            "args": [],
+            "options": {
+                "cwd": "${workspaceFolder}/test/heartbeat/out"
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "type": "shell",
+            "label": "run heartbeat_tests",
+            "command": "./heartbeat_tests.exe",
+            "args": [],
+            "options": {
+                "cwd": "${workspaceFolder}/test/heartbeat/out"
             },
             "group": "test"
         },

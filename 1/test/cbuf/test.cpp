@@ -2,7 +2,7 @@
 
 extern "C"
 {
-#include "cbuf.h"
+#include "cbuf/cbuf.h"
 }
 
 SCENARIO("buffer empty after init")
