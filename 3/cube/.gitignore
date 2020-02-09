@@ -1,0 +1,8 @@
+#Project configuration
+.cproject
+.project
+.mxproject
+.settings
+
+#Generated output
+Debug
