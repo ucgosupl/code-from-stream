@@ -3,6 +3,6 @@
 ## Skrypty linkera
 ## Normy IEC60730 Class B
 
-Nagrania ze streamów:
+Nagrania ze streamów:  
 https://www.youtube.com/watch?v=fV_91hYPcwg  
 https://www.youtube.com/watch?v=bfigx_U1QnI  
