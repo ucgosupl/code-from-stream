@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "cwd": "${workspaceFolder}/16/blink/",
+            "executable": "out/blink.elf",
+            "name": "Debug blink",
+            "device": "STM32F407VG",
+            "svdFile": "C:/Users/mgajd/.vscode/extensions/marus25.cortex-debug-dp-stm32f4-1.0.0/data/STM32F407.svd",
+            "configFiles": [
+                "board/stm32f4discovery-1.cfg"
+            ]
+        },
+        {
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "cwd": "${workspaceFolder}/16/queue/",
+            "executable": "out/queue.elf",
+            "name": "Debug queue",
+            "device": "STM32F407VG",
+            "svdFile": "C:/Users/mgajd/.vscode/extensions/marus25.cortex-debug-dp-stm32f4-1.0.0/data/STM32F407.svd",
+            "configFiles": [
+                "board/stm32f4discovery-1.cfg"
+            ]
+        }
+    ]
+}
