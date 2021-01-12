@@ -60,7 +60,7 @@
  * @param ms            Number of milliseconds the task should be delayed.
  */
 #define rtos_delay(ms)                                                         \
-   vTaskDelay(ms/portTICK_RATE_MS)
+   vTaskDelay(rtos_ms_to_ticks(ms))
 
 /**
  * Delay task for specified amount of millisecond since last_ptr.
