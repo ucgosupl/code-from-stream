@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build libopencm3_example",
+            "type": "shell",
+            "command": "ninja",
+            "args": ["-v"],
+            "options": {
+                "cwd": "${workspaceFolder}/out"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "clean libopencm3_example",
+            "type": "shell",
+            "command": "ninja",
+            "args": ["-v", "clean"],
+            "options": {
+                "cwd": "${workspaceFolder}/out"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+    ]
+}
