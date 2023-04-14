@@ -9,10 +9,11 @@
             "executable": "out/blink.elf",
             "name": "Debug blink",
             "device": "STM32F407VG",
-            "svdFile": "C:/Users/mgajd/.vscode/extensions/marus25.cortex-debug-dp-stm32f4-1.0.0/data/STM32F407.svd",
+            "svdFile": "C:/Users/Admin/.vscode/extensions/marus25.cortex-debug-dp-stm32f4-1.0.0/data/STM32F407.svd",
             "configFiles": [
-                "board/stm32f4discovery-1.cfg"
-            ]
+                "interface/stlink-v2-1.cfg", "target/stm32f4x.cfg"
+            ],
+            "runToMain": true,
         },
         {
             "type": "cortex-debug",
@@ -22,10 +23,11 @@
             "executable": "out/queue.elf",
             "name": "Debug queue",
             "device": "STM32F407VG",
-            "svdFile": "C:/Users/mgajd/.vscode/extensions/marus25.cortex-debug-dp-stm32f4-1.0.0/data/STM32F407.svd",
+            "svdFile": "C:/Users/Admin/.vscode/extensions/marus25.cortex-debug-dp-stm32f4-1.0.0/data/STM32F407.svd",
             "configFiles": [
-                "board/stm32f4discovery-1.cfg"
-            ]
+                "interface/stlink-v2-1.cfg", "target/stm32f4x.cfg"
+            ],
+            "runToMain": true,
         }
     ]
 }

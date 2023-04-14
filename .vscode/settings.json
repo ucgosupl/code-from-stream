@@ -1,6 +1,6 @@
 {
-	"cortex-debug.armToolchainPath": "C:/ARM/arm-none-eabi-gcc-8.2.0-180726/bin",
-    "cortex-debug.openocdPath": "C:/ARM/openocd-0.10.0/bin-x64/openocd.exe",
+	"cortex-debug.armToolchainPath": "D:/Tools/arm-none-eabi-gcc-10.2.0-210213/bin",
+    "cortex-debug.openocdPath": "D:/Tools/openocd-0.10.0/bin-x64/openocd.exe",
     "files.associations": {
         "locale": "c",
         "thread": "c",
