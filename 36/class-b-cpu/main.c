@@ -54,12 +54,24 @@ static void dummy_task(void *params)
 }
 
 int32_t classb_cpu_startup(void);
+int32_t classb_ram_startup(void);
+
+void safe_state(void)
+{
+	while (1)
+		;
+}
 
 void low_level_init_0(void)
 {
-	if (0 == classb_cpu_startup())
+	if (0 != classb_cpu_startup())
 	{
-		return;
+		safe_state();
+	}
+
+	if (0 != classb_ram_startup())
+	{
+		safe_state();
 	}
 
 	return;

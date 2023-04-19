@@ -51,6 +51,7 @@ set(ASM_SRCS
     hw/startup/startup.S
 
     classb/cpu_startup.S
+    classb/ram_startup.S
 )
 
 set(GLOBAL_DEFINES
