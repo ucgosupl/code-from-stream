@@ -53,8 +53,15 @@ static void dummy_task(void *params)
 	}
 }
 
+int32_t classb_cpu_startup(void);
+
 void low_level_init_0(void)
 {
+	if (0 == classb_cpu_startup())
+	{
+		return;
+	}
+
 	return;
 }
 

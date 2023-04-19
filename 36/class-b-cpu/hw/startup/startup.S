@@ -9,6 +9,10 @@
 .syntax unified
 .thumb
 .thumb_func
+
+.extern low_level_init_0
+.extern low_level_init_1
+
 .global Reset_Handler
 
 Reset_Handler:

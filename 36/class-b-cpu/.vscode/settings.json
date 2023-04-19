@@ -2,5 +2,6 @@
     "cortex-debug.variableUseNaturalFormat": false,
     "files.associations": {
         "xmemory": "c"
-    }
+    },
+    "cortex-debug.registerUseNaturalFormat": false
 }

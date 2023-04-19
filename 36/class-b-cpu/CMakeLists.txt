@@ -49,6 +49,8 @@ set(C_SRCS
 
 set(ASM_SRCS
     hw/startup/startup.S
+
+    classb/cpu_startup.S
 )
 
 set(GLOBAL_DEFINES
