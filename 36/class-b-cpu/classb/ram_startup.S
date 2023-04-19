@@ -31,21 +31,27 @@ fill_zero:
 
 fill_zero_end:
     mov r0, RAM_START
-    mov r4, 0x00000000
-    mov r1, 0xFFFFFFFF
 
 read_0_write_1_up:
     /* Check if end address reached */
     cmp r0, r2
     beq read_0_write_1_up_end
 
+    mov r4, 0x00000000
+    mov r1, 1 << 0
+
+bits_read_0_write_1:
     /* Check if previous pattern read */
-    ldr r3, [r0]
+    ldr r3, [r0]    
     cmp r3, r4
     bne error
 
-    /* Write new pattern */
-    str r1, [r0]
+    orr r4, r1, r4
+    str r4, [r0]
+    lsl r1, 1
+    cmp r4, 0xFFFFFFFF
+    bne bits_read_0_write_1
+
     add r0, 4
 
     b read_0_write_1_up
@@ -60,13 +66,29 @@ read_1_write_0_up:
     cmp r0, r2
     beq read_1_write_0_up_end
 
+    mov r4, 0xFFFFFFFF
+    mov r5, 1 << 0
+    mvn r1, r5
+    
+bits_read_1_write_0:
+    /* Check if previous pattern read */
+    ldr r3, [r0]    
+    cmp r3, r4
+    bne error
+
+    and r4, r1, r4
+    str r4, [r0]
+    lsl r5, 1
+    mvn r1, r5
+    cmp r4, 0
+    bne bits_read_1_write_0
+
+
     /* Check if previous pattern read */
     ldr r3, [r0]
     cmp r3, r4
     bne error
 
-    /* Write new pattern */
-    str r1, [r0]
     add r0, 4
 
     b read_1_write_0_up
