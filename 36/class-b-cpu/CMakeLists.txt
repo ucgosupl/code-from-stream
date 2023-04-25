@@ -29,6 +29,8 @@ set(C_SRCS
 
     freertos_hooks.c
 
+    classb/classb_task.c
+
     hw/core_init/core_init.c
     hw/gpio_f4/gpio_f4.c
     hw/startup/hardfault.c
@@ -52,6 +54,9 @@ set(ASM_SRCS
 
     classb/cpu_startup.S
     classb/ram_startup.S
+
+    classb/cpu_runtime.S
+    classb/ram_runtime.S
 )
 
 set(GLOBAL_DEFINES

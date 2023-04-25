@@ -36,6 +36,7 @@ int main(void)
 	core_init();
 
 	dummy_task_init();
+	classb_task_init();
 
 	rtos_start_scheduler();
 
@@ -56,7 +57,7 @@ static void dummy_task(void *params)
 int32_t classb_cpu_startup(void);
 int32_t classb_ram_startup(void);
 
-void safe_state(void)
+void safe_state_startup(void)
 {
 	while (1)
 		;
@@ -66,12 +67,12 @@ void low_level_init_0(void)
 {
 	if (0 != classb_cpu_startup())
 	{
-		safe_state();
+		safe_state_startup();
 	}
 
-	if (0 != classb_ram_startup())
+	//if (0 != classb_ram_startup())
 	{
-		safe_state();
+		//safe_state_startup();
 	}
 
 	return;

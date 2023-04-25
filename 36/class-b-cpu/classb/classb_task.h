@@ -1,0 +1,1 @@
+void classb_task_init(void);
